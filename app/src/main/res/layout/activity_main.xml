@@ -14,7 +14,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="header_background.png" />
+        android:text="@string/header_background_png" />
 
     <LinearLayout
         android:layout_width="match_parent"

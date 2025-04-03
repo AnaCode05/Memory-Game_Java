@@ -23,6 +23,7 @@
     <string name="trophy_image">Trophy Image</string>
     <string name="score_default">Score:</string>
     <string name="tiles_default">Tiles:</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="save_name">Save Name</string>
+    <string name="toast_name_warning">No name is entered, so it will not be saved in the high scores list.</string>
+    <string name="header_background_png">header_background.png</string>
 </resources>

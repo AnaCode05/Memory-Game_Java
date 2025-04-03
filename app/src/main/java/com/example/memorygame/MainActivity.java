@@ -1,7 +1,11 @@
 package com.example.memorygame;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
 import androidx.annotation.NonNull;
@@ -12,9 +16,26 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
+
+    // ArrayList to hold names of players eligible for high scores
+    public ArrayList<String> names = new ArrayList<>();
+
+    public void saveName(View v) {
+        EditText nameInput = findViewById(R.id.txtInputName); // get the name input
+        String name = nameInput.getText().toString();
+
+        Log.d("NAME", name);
+        if (name.isEmpty()) {
+            Toast.makeText(this, "No name is entered, so it will not be saved in the high scores list.", Toast.LENGTH_LONG).show();
+        } else {
+            names.add(name); // add user to names list (for top scores)
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
